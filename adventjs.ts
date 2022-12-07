@@ -1,20 +1,20 @@
 // ##################################### First adventjs Challenge ##########################################
 const gifts = ['cat', 'game', 'socks']
 function wrapping(gifts: Array<string>):string[] {
-    const result = []
-  
-    for(let i = 0; i< gifts.length; i++){
-      const paper = '*'.repeat(gifts[i].length+2);
-      const giftWrapped = `${paper}\n*${gifts[i]}*\n${paper}`;
-      result.push(giftWrapped);
-    }
-    return result
+   
+    return gifts.map((gift) => {
+        
+        let wrap = '**'+'*'.repeat(gift.length);
+        let giftWrapped = wrap+'\n*'+gift+'*\n'+wrap
+
+        return giftWrapped;
+    });
   }
-//console.log(wrapping(gifts));
+console.log(wrapping(gifts));
 
 // ##################################### Second adventjs Challenge ##########################################
 
-const year = 2022;
+//const year = 2022;
 function countHours(year: number, holidays: string[]): number {
     const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -34,7 +34,7 @@ function countHours(year: number, holidays: string[]): number {
     }
     return extraHours;
 }
-const holidays = ['01/06', '04/01', '12/25'];
+//const holidays = ['01/06', '04/01', '12/25'];
 //console.log(countHours(year, holidays));
 
 // ##################################### Third adventjs Challenge ##########################################
@@ -58,8 +58,9 @@ function distributeGifts(packOfGifts: Array<string>, reindeers: Array<string>): 
     return maxCantOfPacks;
 }
 
-const packOfGifts = ["book", "doll", "ball"]
-const reindeers = ["dasher", "dancer", ""]
-// pack weights 4 + 4 + 4 = 12
-// reindeers can carry (2 * 6) + (2 * 6) = 24
+//const packOfGifts = ["book", "doll", "ball"]
+//const reindeers = ["dasher", "dancer", ""]
 //console.log(distributeGifts(packOfGifts, reindeers));
+
+// ##################################### Fourth adventjs Challenge ##########################################
+
